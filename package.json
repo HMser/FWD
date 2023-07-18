@@ -9,7 +9,7 @@
   "author": "Hashir - HMser",
   "license": "MIT",
   "dependencies": {
-    "whatsapp-web.js": "^1.21.2",
+    "whatsapp-web.js": "^1.21.0",
     "fs": "0.0.1-security",
     "express": "^4.18.2",
     "qrcode-terminal": "^0.12.0"
