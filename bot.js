@@ -1,8 +1,8 @@
 const fs = require('fs');
 const { Client } = require('whatsapp-web.js');
+const qrcode = require('qrcode-terminal'); // Import the qrcode-terminal library
 
 const SESSION_FILE_PATH = './session.json';
-
 
 if (fs.existsSync(SESSION_FILE_PATH)) {
   const sessionData = require(SESSION_FILE_PATH);
@@ -14,7 +14,7 @@ if (fs.existsSync(SESSION_FILE_PATH)) {
 
   client.on('qr', (qr) => {
     console.log('Scan the QR code to log in:');
-    console.log(qr);
+    qrcode.generate(qr, { small: true }); // Display the QR code
   });
 
   client.on('authenticated', (session) => {
